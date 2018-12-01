@@ -1,8 +1,8 @@
-import cv2                 # working with, mainly resizing, images
-import numpy as np         # dealing with arrays
-import os                  # dealing with directories
-from random import shuffle # mixing up or currently ordered data that might lead our network astray in training.
-from tqdm import tqdm      # a nice pretty percentage bar for tasks. Thanks to viewer Daniel BA1/4hler for this suggestion
+import cv2                 
+import numpy as np        
+import os                 
+from random import shuffle 
+from tqdm import tqdm    
 
 TRAIN_DIR = 'train'
 TEST_DIR = 'test'
@@ -24,15 +24,15 @@ def label_img(img):
     
    # word_label = img[0]
   
-    if word_label == 'A': return [0,0,0,0,1]    #A_common_krait
+    if word_label == 'A': return [0,0,0,0,1]  
     
-    elif word_label == 'B': return [0,0,0,1,0]  #B_hump_nosed_viper
+    elif word_label == 'B': return [0,0,0,1,0] 
     #elif word_label == 'v': return [0,0,1,0]
-    elif word_label == 'C': return [0,0,1,0,0]  #C_indian_cobra
+    elif word_label == 'C': return [0,0,1,0,0] 
     
-    elif word_label == 'D': return [0,1,0,0,0]  #D_russels_viper
+    elif word_label == 'D': return [0,1,0,0,0]
     
-    elif word_label == 'E' : return [1,0,0,0,0] #E_saw_scaled_viper
+    elif word_label == 'E' : return [1,0,0,0,0] 
     
 def create_train_data():
     training_data = []
